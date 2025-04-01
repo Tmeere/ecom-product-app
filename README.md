@@ -1,4 +1,4 @@
-E-Commerce Product App
+#E-Commerce Product App
 Welcome to the E-Commerce Product App, a simple React-based application for displaying and filtering a menu of products. This project is designed to showcase a dynamic product list with filtering options for food, drinks, and all items.
 
 Features
