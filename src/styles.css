@@ -1,0 +1,337 @@
+/* Importing Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Sacramento&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+/* General styles for paragraphs */
+p {
+    color: rgb(0, 0, 0);
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Styling for h1 elements */
+h1 {
+    color: rgb(255, 255, 255);
+    text-align: center;
+    font-family: 'Poppins', cursive;
+}
+
+/* Resetting margin and padding for html and body, and setting default font */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Main app container styles */
+#app {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+/* Header section styles */
+#header {
+    text-align: center;
+    padding: 50px 20px;
+    background-image: url('Images/CoffeeSplash.jpg');
+    background-size: cover;
+    background-position: center center;
+    color: white;
+    margin-bottom: 20px;
+    width: 100%;
+    box-sizing: border-box;
+    height: 300px;
+    position: relative;
+}
+
+/* Adding a dark overlay to the header background */
+#header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+/* Ensuring header text appears above the overlay */
+#header h1, #header p {
+    position: relative;
+    z-index: 2;
+}
+
+/* Styling for header h1 */
+#header h1 {
+    font-size: 3rem;
+    margin: 0;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+    font-family: 'Poppins', cursive;
+}
+
+/* Styling for header paragraph */
+#header p {
+    font-size: 1.2rem;
+    color: aliceblue;
+    margin: 10px 0;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Product grid container styles */
+#Products {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    background-color: rgba(240, 248, 255, 0.589);
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Individual product item styles */
+.ProductItem {
+    background-color: rgba(88, 88, 88, 0.794);
+    padding: 10px;
+    margin: 10px;
+    border-radius: 10px;
+    border: 3px solid rgb(62, 62, 62);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 300px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+/* Hover effect for product items */
+.ProductItem:hover {
+    transform: scale(1.02);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+/* Product image container styles */
+#productBox {
+    width: 100%;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+/* Styling for product images */
+#productBox img {
+    width: 100%;
+    height: 200px;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    object-fit: cover;
+}
+
+/* Product title styles */
+.ProductItem h2 {
+    font-size: 1.5rem;
+    margin: 10px 0;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+}
+
+/* Product description styles */
+.ProductItem p {
+    font-size: 1rem;
+    color: rgb(120, 120, 120);
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+}
+
+/* Product price styles */
+.ProductItem .price {
+    font-size: 1.2rem;
+    color: rgb(255, 208, 0);
+    font-weight: 600;
+    margin: 10px 0;
+}
+
+/* Footer section styles */
+#footer {
+    background: linear-gradient(135deg, #616161, #6c6c6c);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 20px 0;
+    position: relative;
+    gap: 10px;
+    color: white;
+    box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* Footer paragraph styles */
+#footer p {
+    text-align: center;
+    margin: 0;
+    font-size: 1rem;
+    font-family: 'Poppins', sans-serif;
+    color: white;
+}
+
+/* Social links container styles */
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin: 0;
+}
+
+/* Social link styles */
+.social-links a {
+    color: #ffcc00;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+/* Hover effect for social links */
+.social-links a:hover {
+    text-decoration: underline;
+}
+
+/* Menu buttons container styles */
+#MenuButtons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin: 20px 0;
+}
+
+/* Menu button styles */
+#MenuButtons button {
+    background-color: #ffcc00;
+    color: #333;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+/* Hover effect for menu buttons */
+#MenuButtons button:hover {
+    background-color: #ffb700;
+    color: white;
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Active state for menu buttons */
+#MenuButtons button:active {
+    transform: scale(0.95);
+}
+
+/* General button transition */
+button {
+    transition: all 0.3s ease;
+}
+
+/* Product item list styles */
+.product-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 1rem;
+    color: aliceblue;
+    background-color: rgba(50, 50, 50, 0.8);
+    border-radius: 8px;
+    padding: 1rem;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.5s ease forwards;
+}
+
+/* Product item image styles */
+.product-item img {
+    width: 150px;
+    height: auto;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+/* Product details container styles */
+.product-item .product-details {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Product title styles */
+.product-item .product-title {
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+/* Product description styles */
+.product-item .product-description {
+    font-size: 0.9rem;
+    color: #cecece;
+}
+
+/* Hover effect for product title */
+.product-item:hover .product-title {
+    color: #ffcc00;
+    transition: color 0.3s ease;
+}
+
+/* Keyframe animation for fade-in-up effect */
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Keyframe animation for fade-in effect */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.95);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Responsive styles for smaller screens */
+@media (max-width: 768px) {
+    #Products {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    }
+    .ProductItem {
+        min-height: 250px;
+    }
+    #footer {
+        flex-direction: column;
+        text-align: center;
+    }
+    .social-links {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+}
